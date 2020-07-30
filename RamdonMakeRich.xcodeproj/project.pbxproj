@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		002A883124D2CCEB00003602 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 002A883024D2CCEB00003602 /* AppDelegate.m */; };
+		002A883424D2CCEB00003602 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 002A883324D2CCEB00003602 /* SceneDelegate.m */; };
+		002A883724D2CCEB00003602 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 002A883624D2CCEB00003602 /* ViewController.m */; };
+		002A883A24D2CCEB00003602 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 002A883824D2CCEB00003602 /* Main.storyboard */; };
+		002A883C24D2CCED00003602 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 002A883B24D2CCED00003602 /* Assets.xcassets */; };
+		002A883F24D2CCED00003602 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 002A883D24D2CCED00003602 /* LaunchScreen.storyboard */; };
+		002A884224D2CCED00003602 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 002A884124D2CCED00003602 /* main.m */; };
+		002A884C24D2CCEE00003602 /* RamdonMakeRichTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 002A884B24D2CCEE00003602 /* RamdonMakeRichTests.m */; };
+		002A885724D2CCEE00003602 /* RamdonMakeRichUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 002A885624D2CCEE00003602 /* RamdonMakeRichUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		002A884824D2CCEE00003602 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 002A882424D2CCEB00003602 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 002A882B24D2CCEB00003602;
+			remoteInfo = RamdonMakeRich;
+		};
+		002A885324D2CCEE00003602 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 002A882424D2CCEB00003602 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 002A882B24D2CCEB00003602;
+			remoteInfo = RamdonMakeRich;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		002A882C24D2CCEB00003602 /* RamdonMakeRich.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RamdonMakeRich.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		002A882F24D2CCEB00003602 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		002A883024D2CCEB00003602 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		002A883224D2CCEB00003602 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		002A883324D2CCEB00003602 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		002A883524D2CCEB00003602 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		002A883624D2CCEB00003602 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		002A883924D2CCEB00003602 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		002A883B24D2CCED00003602 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		002A883E24D2CCED00003602 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		002A884024D2CCED00003602 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		002A884124D2CCED00003602 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		002A884724D2CCEE00003602 /* RamdonMakeRichTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RamdonMakeRichTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		002A884B24D2CCEE00003602 /* RamdonMakeRichTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RamdonMakeRichTests.m; sourceTree = "<group>"; };
+		002A884D24D2CCEE00003602 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		002A885224D2CCEE00003602 /* RamdonMakeRichUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RamdonMakeRichUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		002A885624D2CCEE00003602 /* RamdonMakeRichUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RamdonMakeRichUITests.m; sourceTree = "<group>"; };
+		002A885824D2CCEE00003602 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		002A882924D2CCEB00003602 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		002A884424D2CCEE00003602 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		002A884F24D2CCEE00003602 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		002A882324D2CCEB00003602 = {
+			isa = PBXGroup;
+			children = (
+				002A882E24D2CCEB00003602 /* RamdonMakeRich */,
+				002A884A24D2CCEE00003602 /* RamdonMakeRichTests */,
+				002A885524D2CCEE00003602 /* RamdonMakeRichUITests */,
+				002A882D24D2CCEB00003602 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		002A882D24D2CCEB00003602 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				002A882C24D2CCEB00003602 /* RamdonMakeRich.app */,
+				002A884724D2CCEE00003602 /* RamdonMakeRichTests.xctest */,
+				002A885224D2CCEE00003602 /* RamdonMakeRichUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		002A882E24D2CCEB00003602 /* RamdonMakeRich */ = {
+			isa = PBXGroup;
+			children = (
+				002A882F24D2CCEB00003602 /* AppDelegate.h */,
+				002A883024D2CCEB00003602 /* AppDelegate.m */,
+				002A883224D2CCEB00003602 /* SceneDelegate.h */,
+				002A883324D2CCEB00003602 /* SceneDelegate.m */,
+				002A883524D2CCEB00003602 /* ViewController.h */,
+				002A883624D2CCEB00003602 /* ViewController.m */,
+				002A883824D2CCEB00003602 /* Main.storyboard */,
+				002A883B24D2CCED00003602 /* Assets.xcassets */,
+				002A883D24D2CCED00003602 /* LaunchScreen.storyboard */,
+				002A884024D2CCED00003602 /* Info.plist */,
+				002A884124D2CCED00003602 /* main.m */,
+			);
+			path = RamdonMakeRich;
+			sourceTree = "<group>";
+		};
+		002A884A24D2CCEE00003602 /* RamdonMakeRichTests */ = {
+			isa = PBXGroup;
+			children = (
+				002A884B24D2CCEE00003602 /* RamdonMakeRichTests.m */,
+				002A884D24D2CCEE00003602 /* Info.plist */,
+			);
+			path = RamdonMakeRichTests;
+			sourceTree = "<group>";
+		};
+		002A885524D2CCEE00003602 /* RamdonMakeRichUITests */ = {
+			isa = PBXGroup;
+			children = (
+				002A885624D2CCEE00003602 /* RamdonMakeRichUITests.m */,
+				002A885824D2CCEE00003602 /* Info.plist */,
+			);
+			path = RamdonMakeRichUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		002A882B24D2CCEB00003602 /* RamdonMakeRich */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 002A885B24D2CCEE00003602 /* Build configuration list for PBXNativeTarget "RamdonMakeRich" */;
+			buildPhases = (
+				002A882824D2CCEB00003602 /* Sources */,
+				002A882924D2CCEB00003602 /* Frameworks */,
+				002A882A24D2CCEB00003602 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RamdonMakeRich;
+			productName = RamdonMakeRich;
+			productReference = 002A882C24D2CCEB00003602 /* RamdonMakeRich.app */;
+			productType = "com.apple.product-type.application";
+		};
+		002A884624D2CCEE00003602 /* RamdonMakeRichTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 002A885E24D2CCEE00003602 /* Build configuration list for PBXNativeTarget "RamdonMakeRichTests" */;
+			buildPhases = (
+				002A884324D2CCEE00003602 /* Sources */,
+				002A884424D2CCEE00003602 /* Frameworks */,
+				002A884524D2CCEE00003602 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				002A884924D2CCEE00003602 /* PBXTargetDependency */,
+			);
+			name = RamdonMakeRichTests;
+			productName = RamdonMakeRichTests;
+			productReference = 002A884724D2CCEE00003602 /* RamdonMakeRichTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		002A885124D2CCEE00003602 /* RamdonMakeRichUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 002A886124D2CCEE00003602 /* Build configuration list for PBXNativeTarget "RamdonMakeRichUITests" */;
+			buildPhases = (
+				002A884E24D2CCEE00003602 /* Sources */,
+				002A884F24D2CCEE00003602 /* Frameworks */,
+				002A885024D2CCEE00003602 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				002A885424D2CCEE00003602 /* PBXTargetDependency */,
+			);
+			name = RamdonMakeRichUITests;
+			productName = RamdonMakeRichUITests;
+			productReference = 002A885224D2CCEE00003602 /* RamdonMakeRichUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		002A882424D2CCEB00003602 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "Dong&Ling";
+				TargetAttributes = {
+					002A882B24D2CCEB00003602 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					002A884624D2CCEE00003602 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 002A882B24D2CCEB00003602;
+					};
+					002A885124D2CCEE00003602 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 002A882B24D2CCEB00003602;
+					};
+				};
+			};
+			buildConfigurationList = 002A882724D2CCEB00003602 /* Build configuration list for PBXProject "RamdonMakeRich" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 002A882324D2CCEB00003602;
+			productRefGroup = 002A882D24D2CCEB00003602 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				002A882B24D2CCEB00003602 /* RamdonMakeRich */,
+				002A884624D2CCEE00003602 /* RamdonMakeRichTests */,
+				002A885124D2CCEE00003602 /* RamdonMakeRichUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		002A882A24D2CCEB00003602 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				002A883F24D2CCED00003602 /* LaunchScreen.storyboard in Resources */,
+				002A883C24D2CCED00003602 /* Assets.xcassets in Resources */,
+				002A883A24D2CCEB00003602 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		002A884524D2CCEE00003602 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		002A885024D2CCEE00003602 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		002A882824D2CCEB00003602 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				002A883724D2CCEB00003602 /* ViewController.m in Sources */,
+				002A883124D2CCEB00003602 /* AppDelegate.m in Sources */,
+				002A884224D2CCED00003602 /* main.m in Sources */,
+				002A883424D2CCEB00003602 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		002A884324D2CCEE00003602 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				002A884C24D2CCEE00003602 /* RamdonMakeRichTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		002A884E24D2CCEE00003602 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				002A885724D2CCEE00003602 /* RamdonMakeRichUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		002A884924D2CCEE00003602 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 002A882B24D2CCEB00003602 /* RamdonMakeRich */;
+			targetProxy = 002A884824D2CCEE00003602 /* PBXContainerItemProxy */;
+		};
+		002A885424D2CCEE00003602 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 002A882B24D2CCEB00003602 /* RamdonMakeRich */;
+			targetProxy = 002A885324D2CCEE00003602 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		002A883824D2CCEB00003602 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				002A883924D2CCEB00003602 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		002A883D24D2CCED00003602 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				002A883E24D2CCED00003602 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		002A885924D2CCEE00003602 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		002A885A24D2CCEE00003602 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		002A885C24D2CCEE00003602 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RamdonMakeRich/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lixiaodong.Li.RamdonMakeRich;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		002A885D24D2CCEE00003602 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RamdonMakeRich/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lixiaodong.Li.RamdonMakeRich;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		002A885F24D2CCEE00003602 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RamdonMakeRichTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lixiaodong.Li.RamdonMakeRichTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RamdonMakeRich.app/RamdonMakeRich";
+			};
+			name = Debug;
+		};
+		002A886024D2CCEE00003602 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RamdonMakeRichTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lixiaodong.Li.RamdonMakeRichTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RamdonMakeRich.app/RamdonMakeRich";
+			};
+			name = Release;
+		};
+		002A886224D2CCEE00003602 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RamdonMakeRichUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lixiaodong.Li.RamdonMakeRichUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RamdonMakeRich;
+			};
+			name = Debug;
+		};
+		002A886324D2CCEE00003602 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RamdonMakeRichUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lixiaodong.Li.RamdonMakeRichUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RamdonMakeRich;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		002A882724D2CCEB00003602 /* Build configuration list for PBXProject "RamdonMakeRich" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				002A885924D2CCEE00003602 /* Debug */,
+				002A885A24D2CCEE00003602 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		002A885B24D2CCEE00003602 /* Build configuration list for PBXNativeTarget "RamdonMakeRich" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				002A885C24D2CCEE00003602 /* Debug */,
+				002A885D24D2CCEE00003602 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		002A885E24D2CCEE00003602 /* Build configuration list for PBXNativeTarget "RamdonMakeRichTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				002A885F24D2CCEE00003602 /* Debug */,
+				002A886024D2CCEE00003602 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		002A886124D2CCEE00003602 /* Build configuration list for PBXNativeTarget "RamdonMakeRichUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				002A886224D2CCEE00003602 /* Debug */,
+				002A886324D2CCEE00003602 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 002A882424D2CCEB00003602 /* Project object */;
+}
