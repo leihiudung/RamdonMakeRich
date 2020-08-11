@@ -1,0 +1,21 @@
+//
+//  RamdonMakeRichHeader.pch
+//  RamdonMakeRich
+//
+//  Created by Tom-Li on 2020/8/3.
+//  Copyright © 2020 Dong&Ling. All rights reserved.
+//
+
+#ifndef RamdonMakeRichHeader_pch
+#define RamdonMakeRichHeader_pch
+
+#import <ReactiveObjC.h>
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#define CenterX(targetView) (targetView.frame.size.width * 0.5)
+#define TallCellHeight(targetView) CenterX(targetView)
+#define CellWidth(targetView) (CenterX(targetView))
+#define COL ((int)(320.0 / SIZE / 2.0) * 2)
+
+#endif /* RamdonMakeRichHeader_pch */

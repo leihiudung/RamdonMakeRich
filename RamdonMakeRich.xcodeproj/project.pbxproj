@@ -3,19 +3,43 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		002A883124D2CCEB00003602 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 002A883024D2CCEB00003602 /* AppDelegate.m */; };
-		002A883424D2CCEB00003602 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 002A883324D2CCEB00003602 /* SceneDelegate.m */; };
-		002A883724D2CCEB00003602 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 002A883624D2CCEB00003602 /* ViewController.m */; };
 		002A883A24D2CCEB00003602 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 002A883824D2CCEB00003602 /* Main.storyboard */; };
 		002A883C24D2CCED00003602 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 002A883B24D2CCED00003602 /* Assets.xcassets */; };
 		002A883F24D2CCED00003602 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 002A883D24D2CCED00003602 /* LaunchScreen.storyboard */; };
 		002A884224D2CCED00003602 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 002A884124D2CCED00003602 /* main.m */; };
 		002A884C24D2CCEE00003602 /* RamdonMakeRichTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 002A884B24D2CCEE00003602 /* RamdonMakeRichTests.m */; };
 		002A885724D2CCEE00003602 /* RamdonMakeRichUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 002A885624D2CCEE00003602 /* RamdonMakeRichUITests.m */; };
+		002A886E24D5500500003602 /* data_out.dat in Resources */ = {isa = PBXBuildFile; fileRef = 002A886D24D5500400003602 /* data_out.dat */; };
+		002A887124D550A000003602 /* BasicCaculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 002A887024D550A000003602 /* BasicCaculatorViewController.m */; };
+		002A887424D5578C00003602 /* TAVDatabaseTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 002A887324D5578C00003602 /* TAVDatabaseTool.m */; };
+		0082CFF624D825DB00BE9065 /* TAVNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0082CFF524D825DB00BE9065 /* TAVNetworkTool.m */; };
+		0082D00024D9584E00BE9065 /* TAVBasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0082CFFF24D9584E00BE9065 /* TAVBasicViewController.m */; };
+		0082D00324D9588700BE9065 /* TAVHallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0082D00224D9588700BE9065 /* TAVHallViewController.m */; };
+		0082D00624D959AA00BE9065 /* TAVHallViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0082D00524D959AA00BE9065 /* TAVHallViewModel.m */; };
+		0082D00C24D961EA00BE9065 /* TAVHallModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0082D00B24D961EA00BE9065 /* TAVHallModel.m */; };
+		0082D00F24D970C400BE9065 /* TAVLotteryPO.m in Sources */ = {isa = PBXBuildFile; fileRef = 0082D00E24D970C400BE9065 /* TAVLotteryPO.m */; };
+		0082D01724DBD9AA00BE9065 /* TAVTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0082D01624DBD9AA00BE9065 /* TAVTabBarViewController.m */; };
+		0082D02124DBDE0A00BE9065 /* TAVTabBarControllerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 0082D02024DBDE0A00BE9065 /* TAVTabBarControllerConfig.m */; };
+		0082D02824DBEA8300BE9065 /* TAVViewModelProtocolImp.m in Sources */ = {isa = PBXBuildFile; fileRef = 0082D02724DBEA8300BE9065 /* TAVViewModelProtocolImp.m */; };
+		0082D02B24DBEB1F00BE9065 /* TAVBasicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0082D02A24DBEB1F00BE9065 /* TAVBasicModel.m */; };
+		0082D02E24DBED5400BE9065 /* TAVBasicViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0082D02D24DBED5400BE9065 /* TAVBasicViewModel.m */; };
+		0082D03124DC155A00BE9065 /* TAVHallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0082D03024DC155A00BE9065 /* TAVHallView.m */; };
+		0082D03424DC18E500BE9065 /* TAVHallCollectionViewCellLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0082D03324DC18E500BE9065 /* TAVHallCollectionViewCellLayout.m */; };
+		0082D03724DD3D7D00BE9065 /* TAVHallCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0082D03624DD3D7D00BE9065 /* TAVHallCollectionViewCell.m */; };
+		0082D03E24DE6FC600BE9065 /* TAVHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0082D03D24DE6FC600BE9065 /* TAVHistoryViewController.m */; };
+		0082D04224DE700700BE9065 /* TAVHistoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0082D04124DE700700BE9065 /* TAVHistoryView.m */; };
+		0082D04524DE702100BE9065 /* TAVHistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0082D04424DE702100BE9065 /* TAVHistoryTableViewCell.m */; };
+		0082D04824DE706200BE9065 /* TAVBasicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0082D04724DE706200BE9065 /* TAVBasicView.m */; };
+		0082D04B24E13C8900BE9065 /* TAVNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0082D04A24E13C8900BE9065 /* TAVNavigationViewController.m */; };
+		0082D04F24E1641300BE9065 /* TAVHistoryViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0082D04E24E1641300BE9065 /* TAVHistoryViewModel.m */; };
+		376295F29FC8A13ED1761DAC /* Pods_RamdonMakeRichTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9691E12F0687AD58233A230 /* Pods_RamdonMakeRichTests.framework */; };
+		6D197557E5FA87823493AE04 /* Pods_RamdonMakeRich.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC13DB8E35F345C0FB238AD7 /* Pods_RamdonMakeRich.framework */; };
+		85F9242CF535480D86F66B63 /* Pods_RamdonMakeRich_RamdonMakeRichUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 685759167FCC36493AA13849 /* Pods_RamdonMakeRich_RamdonMakeRichUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,10 +63,6 @@
 		002A882C24D2CCEB00003602 /* RamdonMakeRich.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RamdonMakeRich.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		002A882F24D2CCEB00003602 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		002A883024D2CCEB00003602 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		002A883224D2CCEB00003602 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		002A883324D2CCEB00003602 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		002A883524D2CCEB00003602 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		002A883624D2CCEB00003602 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		002A883924D2CCEB00003602 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		002A883B24D2CCED00003602 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		002A883E24D2CCED00003602 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +74,62 @@
 		002A885224D2CCEE00003602 /* RamdonMakeRichUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RamdonMakeRichUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		002A885624D2CCEE00003602 /* RamdonMakeRichUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RamdonMakeRichUITests.m; sourceTree = "<group>"; };
 		002A885824D2CCEE00003602 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		002A886D24D5500400003602 /* data_out.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data_out.dat; sourceTree = "<group>"; };
+		002A886F24D550A000003602 /* BasicCaculatorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicCaculatorViewController.h; sourceTree = "<group>"; };
+		002A887024D550A000003602 /* BasicCaculatorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicCaculatorViewController.m; sourceTree = "<group>"; };
+		002A887224D5578C00003602 /* TAVDatabaseTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAVDatabaseTool.h; sourceTree = "<group>"; };
+		002A887324D5578C00003602 /* TAVDatabaseTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAVDatabaseTool.m; sourceTree = "<group>"; };
+		0082CFF424D825DB00BE9065 /* TAVNetworkTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAVNetworkTool.h; sourceTree = "<group>"; };
+		0082CFF524D825DB00BE9065 /* TAVNetworkTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAVNetworkTool.m; sourceTree = "<group>"; };
+		0082CFFC24D8281100BE9065 /* RamdonMakeRichHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RamdonMakeRichHeader.pch; sourceTree = "<group>"; };
+		0082CFFE24D9584E00BE9065 /* TAVBasicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAVBasicViewController.h; sourceTree = "<group>"; };
+		0082CFFF24D9584E00BE9065 /* TAVBasicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAVBasicViewController.m; sourceTree = "<group>"; };
+		0082D00124D9588700BE9065 /* TAVHallViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAVHallViewController.h; sourceTree = "<group>"; };
+		0082D00224D9588700BE9065 /* TAVHallViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAVHallViewController.m; sourceTree = "<group>"; };
+		0082D00424D959AA00BE9065 /* TAVHallViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAVHallViewModel.h; sourceTree = "<group>"; };
+		0082D00524D959AA00BE9065 /* TAVHallViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAVHallViewModel.m; sourceTree = "<group>"; };
+		0082D00A24D961EA00BE9065 /* TAVHallModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAVHallModel.h; sourceTree = "<group>"; };
+		0082D00B24D961EA00BE9065 /* TAVHallModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAVHallModel.m; sourceTree = "<group>"; };
+		0082D00D24D970C400BE9065 /* TAVLotteryPO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAVLotteryPO.h; sourceTree = "<group>"; };
+		0082D00E24D970C400BE9065 /* TAVLotteryPO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAVLotteryPO.m; sourceTree = "<group>"; };
+		0082D01524DBD9AA00BE9065 /* TAVTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAVTabBarViewController.h; sourceTree = "<group>"; };
+		0082D01624DBD9AA00BE9065 /* TAVTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAVTabBarViewController.m; sourceTree = "<group>"; };
+		0082D01F24DBDE0A00BE9065 /* TAVTabBarControllerConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAVTabBarControllerConfig.h; sourceTree = "<group>"; };
+		0082D02024DBDE0A00BE9065 /* TAVTabBarControllerConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAVTabBarControllerConfig.m; sourceTree = "<group>"; };
+		0082D02524DBE9ED00BE9065 /* TAVViewModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAVViewModelProtocol.h; sourceTree = "<group>"; };
+		0082D02624DBEA8300BE9065 /* TAVViewModelProtocolImp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAVViewModelProtocolImp.h; sourceTree = "<group>"; };
+		0082D02724DBEA8300BE9065 /* TAVViewModelProtocolImp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAVViewModelProtocolImp.m; sourceTree = "<group>"; };
+		0082D02924DBEB1F00BE9065 /* TAVBasicModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAVBasicModel.h; sourceTree = "<group>"; };
+		0082D02A24DBEB1F00BE9065 /* TAVBasicModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAVBasicModel.m; sourceTree = "<group>"; };
+		0082D02C24DBED5400BE9065 /* TAVBasicViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAVBasicViewModel.h; sourceTree = "<group>"; };
+		0082D02D24DBED5400BE9065 /* TAVBasicViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAVBasicViewModel.m; sourceTree = "<group>"; };
+		0082D02F24DC155A00BE9065 /* TAVHallView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAVHallView.h; sourceTree = "<group>"; };
+		0082D03024DC155A00BE9065 /* TAVHallView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAVHallView.m; sourceTree = "<group>"; };
+		0082D03224DC18E500BE9065 /* TAVHallCollectionViewCellLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAVHallCollectionViewCellLayout.h; sourceTree = "<group>"; };
+		0082D03324DC18E500BE9065 /* TAVHallCollectionViewCellLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAVHallCollectionViewCellLayout.m; sourceTree = "<group>"; };
+		0082D03524DD3D7D00BE9065 /* TAVHallCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAVHallCollectionViewCell.h; sourceTree = "<group>"; };
+		0082D03624DD3D7D00BE9065 /* TAVHallCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAVHallCollectionViewCell.m; sourceTree = "<group>"; };
+		0082D03C24DE6FC600BE9065 /* TAVHistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAVHistoryViewController.h; sourceTree = "<group>"; };
+		0082D03D24DE6FC600BE9065 /* TAVHistoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAVHistoryViewController.m; sourceTree = "<group>"; };
+		0082D04024DE700700BE9065 /* TAVHistoryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAVHistoryView.h; sourceTree = "<group>"; };
+		0082D04124DE700700BE9065 /* TAVHistoryView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAVHistoryView.m; sourceTree = "<group>"; };
+		0082D04324DE702100BE9065 /* TAVHistoryTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAVHistoryTableViewCell.h; sourceTree = "<group>"; };
+		0082D04424DE702100BE9065 /* TAVHistoryTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAVHistoryTableViewCell.m; sourceTree = "<group>"; };
+		0082D04624DE706200BE9065 /* TAVBasicView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAVBasicView.h; sourceTree = "<group>"; };
+		0082D04724DE706200BE9065 /* TAVBasicView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAVBasicView.m; sourceTree = "<group>"; };
+		0082D04924E13C8900BE9065 /* TAVNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAVNavigationViewController.h; sourceTree = "<group>"; };
+		0082D04A24E13C8900BE9065 /* TAVNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAVNavigationViewController.m; sourceTree = "<group>"; };
+		0082D04D24E1641300BE9065 /* TAVHistoryViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAVHistoryViewModel.h; sourceTree = "<group>"; };
+		0082D04E24E1641300BE9065 /* TAVHistoryViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAVHistoryViewModel.m; sourceTree = "<group>"; };
+		314CB91743069BBB2A2830C9 /* Pods-RamdonMakeRichTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RamdonMakeRichTests.release.xcconfig"; path = "Target Support Files/Pods-RamdonMakeRichTests/Pods-RamdonMakeRichTests.release.xcconfig"; sourceTree = "<group>"; };
+		66777B781A89268EE5C605DA /* Pods-RamdonMakeRichTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RamdonMakeRichTests.debug.xcconfig"; path = "Target Support Files/Pods-RamdonMakeRichTests/Pods-RamdonMakeRichTests.debug.xcconfig"; sourceTree = "<group>"; };
+		674427F586A4CB42665B5A08 /* Pods-RamdonMakeRich.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RamdonMakeRich.release.xcconfig"; path = "Target Support Files/Pods-RamdonMakeRich/Pods-RamdonMakeRich.release.xcconfig"; sourceTree = "<group>"; };
+		685759167FCC36493AA13849 /* Pods_RamdonMakeRich_RamdonMakeRichUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RamdonMakeRich_RamdonMakeRichUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		699ED568C4BA2D1A05DDC27B /* Pods-RamdonMakeRich-RamdonMakeRichUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RamdonMakeRich-RamdonMakeRichUITests.debug.xcconfig"; path = "Target Support Files/Pods-RamdonMakeRich-RamdonMakeRichUITests/Pods-RamdonMakeRich-RamdonMakeRichUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7672FA0A841585B35BB72738 /* Pods-RamdonMakeRich-RamdonMakeRichUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RamdonMakeRich-RamdonMakeRichUITests.release.xcconfig"; path = "Target Support Files/Pods-RamdonMakeRich-RamdonMakeRichUITests/Pods-RamdonMakeRich-RamdonMakeRichUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7834408DCBC118453F70C152 /* Pods-RamdonMakeRich.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RamdonMakeRich.debug.xcconfig"; path = "Target Support Files/Pods-RamdonMakeRich/Pods-RamdonMakeRich.debug.xcconfig"; sourceTree = "<group>"; };
+		CC13DB8E35F345C0FB238AD7 /* Pods_RamdonMakeRich.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RamdonMakeRich.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9691E12F0687AD58233A230 /* Pods_RamdonMakeRichTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RamdonMakeRichTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D197557E5FA87823493AE04 /* Pods_RamdonMakeRich.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +145,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				376295F29FC8A13ED1761DAC /* Pods_RamdonMakeRichTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85F9242CF535480D86F66B63 /* Pods_RamdonMakeRich_RamdonMakeRichUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +167,8 @@
 				002A884A24D2CCEE00003602 /* RamdonMakeRichTests */,
 				002A885524D2CCEE00003602 /* RamdonMakeRichUITests */,
 				002A882D24D2CCEB00003602 /* Products */,
+				93097127DABD93AB742B5947 /* Pods */,
+				C0AB981E00AEB01A601FA256 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,17 +185,20 @@
 		002A882E24D2CCEB00003602 /* RamdonMakeRich */ = {
 			isa = PBXGroup;
 			children = (
+				0082D01824DBDD6300BE9065 /* Basic */,
+				0082CFF724D8274A00BE9065 /* Lottery */,
+				0082CFF224D825C400BE9065 /* Tools */,
 				002A882F24D2CCEB00003602 /* AppDelegate.h */,
 				002A883024D2CCEB00003602 /* AppDelegate.m */,
-				002A883224D2CCEB00003602 /* SceneDelegate.h */,
-				002A883324D2CCEB00003602 /* SceneDelegate.m */,
-				002A883524D2CCEB00003602 /* ViewController.h */,
-				002A883624D2CCEB00003602 /* ViewController.m */,
+				002A886F24D550A000003602 /* BasicCaculatorViewController.h */,
+				002A887024D550A000003602 /* BasicCaculatorViewController.m */,
 				002A883824D2CCEB00003602 /* Main.storyboard */,
 				002A883B24D2CCED00003602 /* Assets.xcassets */,
 				002A883D24D2CCED00003602 /* LaunchScreen.storyboard */,
 				002A884024D2CCED00003602 /* Info.plist */,
 				002A884124D2CCED00003602 /* main.m */,
+				002A886D24D5500400003602 /* data_out.dat */,
+				0082CFFC24D8281100BE9065 /* RamdonMakeRichHeader.pch */,
 			);
 			path = RamdonMakeRich;
 			sourceTree = "<group>";
@@ -137,6 +221,205 @@
 			path = RamdonMakeRichUITests;
 			sourceTree = "<group>";
 		};
+		0082CFF224D825C400BE9065 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				0082CFFD24D82B7400BE9065 /* Database */,
+				0082CFF324D825CB00BE9065 /* NetworkTool */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		0082CFF324D825CB00BE9065 /* NetworkTool */ = {
+			isa = PBXGroup;
+			children = (
+				0082CFF424D825DB00BE9065 /* TAVNetworkTool.h */,
+				0082CFF524D825DB00BE9065 /* TAVNetworkTool.m */,
+			);
+			path = NetworkTool;
+			sourceTree = "<group>";
+		};
+		0082CFF724D8274A00BE9065 /* Lottery */ = {
+			isa = PBXGroup;
+			children = (
+				0082CFFB24D8277600BE9065 /* Controller */,
+				0082CFFA24D8277200BE9065 /* View */,
+				0082CFF924D8276900BE9065 /* ViewModel */,
+				0082CFF824D8276400BE9065 /* Model */,
+			);
+			path = Lottery;
+			sourceTree = "<group>";
+		};
+		0082CFF824D8276400BE9065 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0082D00A24D961EA00BE9065 /* TAVHallModel.h */,
+				0082D00B24D961EA00BE9065 /* TAVHallModel.m */,
+				0082D00D24D970C400BE9065 /* TAVLotteryPO.h */,
+				0082D00E24D970C400BE9065 /* TAVLotteryPO.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0082CFF924D8276900BE9065 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0082D04C24E163F700BE9065 /* LotteryHistory */,
+				0082D00424D959AA00BE9065 /* TAVHallViewModel.h */,
+				0082D00524D959AA00BE9065 /* TAVHallViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0082CFFA24D8277200BE9065 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0082D03F24DE6FD100BE9065 /* LotteryHistory */,
+				0082D02F24DC155A00BE9065 /* TAVHallView.h */,
+				0082D03024DC155A00BE9065 /* TAVHallView.m */,
+				0082D03524DD3D7D00BE9065 /* TAVHallCollectionViewCell.h */,
+				0082D03624DD3D7D00BE9065 /* TAVHallCollectionViewCell.m */,
+				0082D03224DC18E500BE9065 /* TAVHallCollectionViewCellLayout.h */,
+				0082D03324DC18E500BE9065 /* TAVHallCollectionViewCellLayout.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0082CFFB24D8277600BE9065 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0082D03B24DE6E7E00BE9065 /* LotteryHistory */,
+				0082D00124D9588700BE9065 /* TAVHallViewController.h */,
+				0082D00224D9588700BE9065 /* TAVHallViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0082CFFD24D82B7400BE9065 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				002A887224D5578C00003602 /* TAVDatabaseTool.h */,
+				002A887324D5578C00003602 /* TAVDatabaseTool.m */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		0082D01824DBDD6300BE9065 /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				0082D01E24DBDDEF00BE9065 /* Config */,
+				0082D01B24DBDD8C00BE9065 /* Controller */,
+				0082D01C24DBDDA900BE9065 /* View */,
+				0082D01A24DBDD8800BE9065 /* ViewModel */,
+				0082D01924DBDD8000BE9065 /* Model */,
+			);
+			path = Basic;
+			sourceTree = "<group>";
+		};
+		0082D01924DBDD8000BE9065 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0082D02924DBEB1F00BE9065 /* TAVBasicModel.h */,
+				0082D02A24DBEB1F00BE9065 /* TAVBasicModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0082D01A24DBDD8800BE9065 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0082D02524DBE9ED00BE9065 /* TAVViewModelProtocol.h */,
+				0082D02624DBEA8300BE9065 /* TAVViewModelProtocolImp.h */,
+				0082D02724DBEA8300BE9065 /* TAVViewModelProtocolImp.m */,
+				0082D02C24DBED5400BE9065 /* TAVBasicViewModel.h */,
+				0082D02D24DBED5400BE9065 /* TAVBasicViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0082D01B24DBDD8C00BE9065 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0082CFFE24D9584E00BE9065 /* TAVBasicViewController.h */,
+				0082CFFF24D9584E00BE9065 /* TAVBasicViewController.m */,
+				0082D01524DBD9AA00BE9065 /* TAVTabBarViewController.h */,
+				0082D01624DBD9AA00BE9065 /* TAVTabBarViewController.m */,
+				0082D04924E13C8900BE9065 /* TAVNavigationViewController.h */,
+				0082D04A24E13C8900BE9065 /* TAVNavigationViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0082D01C24DBDDA900BE9065 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0082D04624DE706200BE9065 /* TAVBasicView.h */,
+				0082D04724DE706200BE9065 /* TAVBasicView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0082D01E24DBDDEF00BE9065 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				0082D01F24DBDE0A00BE9065 /* TAVTabBarControllerConfig.h */,
+				0082D02024DBDE0A00BE9065 /* TAVTabBarControllerConfig.m */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		0082D03B24DE6E7E00BE9065 /* LotteryHistory */ = {
+			isa = PBXGroup;
+			children = (
+				0082D03C24DE6FC600BE9065 /* TAVHistoryViewController.h */,
+				0082D03D24DE6FC600BE9065 /* TAVHistoryViewController.m */,
+			);
+			path = LotteryHistory;
+			sourceTree = "<group>";
+		};
+		0082D03F24DE6FD100BE9065 /* LotteryHistory */ = {
+			isa = PBXGroup;
+			children = (
+				0082D04024DE700700BE9065 /* TAVHistoryView.h */,
+				0082D04124DE700700BE9065 /* TAVHistoryView.m */,
+				0082D04324DE702100BE9065 /* TAVHistoryTableViewCell.h */,
+				0082D04424DE702100BE9065 /* TAVHistoryTableViewCell.m */,
+			);
+			path = LotteryHistory;
+			sourceTree = "<group>";
+		};
+		0082D04C24E163F700BE9065 /* LotteryHistory */ = {
+			isa = PBXGroup;
+			children = (
+				0082D04D24E1641300BE9065 /* TAVHistoryViewModel.h */,
+				0082D04E24E1641300BE9065 /* TAVHistoryViewModel.m */,
+			);
+			path = LotteryHistory;
+			sourceTree = "<group>";
+		};
+		93097127DABD93AB742B5947 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7834408DCBC118453F70C152 /* Pods-RamdonMakeRich.debug.xcconfig */,
+				674427F586A4CB42665B5A08 /* Pods-RamdonMakeRich.release.xcconfig */,
+				699ED568C4BA2D1A05DDC27B /* Pods-RamdonMakeRich-RamdonMakeRichUITests.debug.xcconfig */,
+				7672FA0A841585B35BB72738 /* Pods-RamdonMakeRich-RamdonMakeRichUITests.release.xcconfig */,
+				66777B781A89268EE5C605DA /* Pods-RamdonMakeRichTests.debug.xcconfig */,
+				314CB91743069BBB2A2830C9 /* Pods-RamdonMakeRichTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C0AB981E00AEB01A601FA256 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC13DB8E35F345C0FB238AD7 /* Pods_RamdonMakeRich.framework */,
+				685759167FCC36493AA13849 /* Pods_RamdonMakeRich_RamdonMakeRichUITests.framework */,
+				F9691E12F0687AD58233A230 /* Pods_RamdonMakeRichTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,9 +427,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 002A885B24D2CCEE00003602 /* Build configuration list for PBXNativeTarget "RamdonMakeRich" */;
 			buildPhases = (
+				C034F23CD441EEDB1F0AD555 /* [CP] Check Pods Manifest.lock */,
 				002A882824D2CCEB00003602 /* Sources */,
 				002A882924D2CCEB00003602 /* Frameworks */,
 				002A882A24D2CCEB00003602 /* Resources */,
+				5ABB7F99FFC95B20891C938B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,6 +446,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 002A885E24D2CCEE00003602 /* Build configuration list for PBXNativeTarget "RamdonMakeRichTests" */;
 			buildPhases = (
+				580C50BB563D5B3F3CDD6290 /* [CP] Check Pods Manifest.lock */,
 				002A884324D2CCEE00003602 /* Sources */,
 				002A884424D2CCEE00003602 /* Frameworks */,
 				002A884524D2CCEE00003602 /* Resources */,
@@ -179,9 +465,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 002A886124D2CCEE00003602 /* Build configuration list for PBXNativeTarget "RamdonMakeRichUITests" */;
 			buildPhases = (
+				DA130421013F84ABDB24B490 /* [CP] Check Pods Manifest.lock */,
 				002A884E24D2CCEE00003602 /* Sources */,
 				002A884F24D2CCEE00003602 /* Frameworks */,
 				002A885024D2CCEE00003602 /* Resources */,
+				E668D1A07C5C2645DB21BFD9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -199,6 +487,7 @@
 		002A882424D2CCEB00003602 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = TAV;
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = "Dong&Ling";
 				TargetAttributes = {
@@ -240,6 +529,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				002A886E24D5500500003602 /* data_out.dat in Resources */,
 				002A883F24D2CCED00003602 /* LaunchScreen.storyboard in Resources */,
 				002A883C24D2CCED00003602 /* Assets.xcassets in Resources */,
 				002A883A24D2CCEB00003602 /* Main.storyboard in Resources */,
@@ -262,15 +552,138 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		580C50BB563D5B3F3CDD6290 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RamdonMakeRichTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5ABB7F99FFC95B20891C938B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RamdonMakeRich/Pods-RamdonMakeRich-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RamdonMakeRich/Pods-RamdonMakeRich-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RamdonMakeRich/Pods-RamdonMakeRich-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C034F23CD441EEDB1F0AD555 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RamdonMakeRich-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA130421013F84ABDB24B490 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RamdonMakeRich-RamdonMakeRichUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E668D1A07C5C2645DB21BFD9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RamdonMakeRich-RamdonMakeRichUITests/Pods-RamdonMakeRich-RamdonMakeRichUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RamdonMakeRich-RamdonMakeRichUITests/Pods-RamdonMakeRich-RamdonMakeRichUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RamdonMakeRich-RamdonMakeRichUITests/Pods-RamdonMakeRich-RamdonMakeRichUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		002A882824D2CCEB00003602 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				002A883724D2CCEB00003602 /* ViewController.m in Sources */,
+				0082D00C24D961EA00BE9065 /* TAVHallModel.m in Sources */,
+				0082D00024D9584E00BE9065 /* TAVBasicViewController.m in Sources */,
+				0082D03424DC18E500BE9065 /* TAVHallCollectionViewCellLayout.m in Sources */,
+				0082D02B24DBEB1F00BE9065 /* TAVBasicModel.m in Sources */,
+				0082D04B24E13C8900BE9065 /* TAVNavigationViewController.m in Sources */,
+				0082CFF624D825DB00BE9065 /* TAVNetworkTool.m in Sources */,
+				002A887424D5578C00003602 /* TAVDatabaseTool.m in Sources */,
+				0082D02824DBEA8300BE9065 /* TAVViewModelProtocolImp.m in Sources */,
+				0082D04224DE700700BE9065 /* TAVHistoryView.m in Sources */,
+				0082D02E24DBED5400BE9065 /* TAVBasicViewModel.m in Sources */,
+				002A887124D550A000003602 /* BasicCaculatorViewController.m in Sources */,
+				0082D04524DE702100BE9065 /* TAVHistoryTableViewCell.m in Sources */,
+				0082D00624D959AA00BE9065 /* TAVHallViewModel.m in Sources */,
+				0082D02124DBDE0A00BE9065 /* TAVTabBarControllerConfig.m in Sources */,
+				0082D04824DE706200BE9065 /* TAVBasicView.m in Sources */,
+				0082D00324D9588700BE9065 /* TAVHallViewController.m in Sources */,
+				0082D01724DBD9AA00BE9065 /* TAVTabBarViewController.m in Sources */,
+				0082D04F24E1641300BE9065 /* TAVHistoryViewModel.m in Sources */,
 				002A883124D2CCEB00003602 /* AppDelegate.m in Sources */,
+				0082D00F24D970C400BE9065 /* TAVLotteryPO.m in Sources */,
+				0082D03724DD3D7D00BE9065 /* TAVHallCollectionViewCell.m in Sources */,
+				0082D03E24DE6FC600BE9065 /* TAVHistoryViewController.m in Sources */,
 				002A884224D2CCED00003602 /* main.m in Sources */,
-				002A883424D2CCEB00003602 /* SceneDelegate.m in Sources */,
+				0082D03124DC155A00BE9065 /* TAVHallView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,15 +850,20 @@
 		};
 		002A885C24D2CCEE00003602 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7834408DCBC118453F70C152 /* Pods-RamdonMakeRich.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 99KXN3T389;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/RamdonMakeRich/RamdonMakeRichHeader.pch";
 				INFOPLIST_FILE = RamdonMakeRich/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lixiaodong.Li.RamdonMakeRich;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lixiaodong.Li;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -453,15 +871,20 @@
 		};
 		002A885D24D2CCEE00003602 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 674427F586A4CB42665B5A08 /* Pods-RamdonMakeRich.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 99KXN3T389;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/RamdonMakeRich/RamdonMakeRichHeader.pch";
 				INFOPLIST_FILE = RamdonMakeRich/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lixiaodong.Li.RamdonMakeRich;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lixiaodong.Li;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -469,6 +892,7 @@
 		};
 		002A885F24D2CCEE00003602 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66777B781A89268EE5C605DA /* Pods-RamdonMakeRichTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -488,6 +912,7 @@
 		};
 		002A886024D2CCEE00003602 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 314CB91743069BBB2A2830C9 /* Pods-RamdonMakeRichTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -507,6 +932,7 @@
 		};
 		002A886224D2CCEE00003602 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 699ED568C4BA2D1A05DDC27B /* Pods-RamdonMakeRich-RamdonMakeRichUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RamdonMakeRichUITests/Info.plist;
@@ -524,6 +950,7 @@
 		};
 		002A886324D2CCEE00003602 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7672FA0A841585B35BB72738 /* Pods-RamdonMakeRich-RamdonMakeRichUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RamdonMakeRichUITests/Info.plist;
