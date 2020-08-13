@@ -42,8 +42,11 @@
                     return;
                 }
                 [self saveLotteryHistory:arr];
-                [subscriber sendNext:[self createMsg:[self parseInHistoryPO:arr]]];
-                [subscriber sendCompleted];
+                dispatch_sync(dispatch_get_main_queue(), ^{
+                    [subscriber sendNext:[self createMsg:[self parseInHistoryPO:arr]]];
+                    [subscriber sendCompleted];
+                });
+                
             }];
             
             
@@ -86,12 +89,8 @@
     [[TAVNetworkTool share] requestLotteryHistory:issueno == nil ? toIssueno : issueno withResultBlock:^(id _Nonnull resultDic) {
         NSDictionary *dic = resultDic;
         NSMutableArray *modelArr = [NSMutableArray array];
-        if (dic != nil && [dic objectForKey:@"list"]) {
-            [modelArr addObjectsFromArray:dic[@"list"]];
-//            for (NSDictionary *lotteryDic in lotteryArr) {
-//                TAVHallModel *model = [[TAVHallModel alloc]initWithDictionary:lotteryDic];
-//                [modelArr addObject:model];
-//            }
+        if (dic != nil && [dic objectForKey:@"data"]) {
+            [modelArr addObjectsFromArray:dic[@"data"][@"list"]];
         }
         resultBlock(modelArr.copy);
     }];
@@ -102,10 +101,57 @@
     for (NSDictionary *lotteryDic in lotteryArr) {
         TAVHallModel *model = [[TAVHallModel alloc]initWithDictionary:lotteryDic];
         BOOL saveFlag = [[TAVDatabaseTool share] saveLottery:model];
+        
     }
-//    for (TAVHallModel *model in histories) {
-//        [[TAVDatabaseTool share] saveLottery:model];
-//    }
+    __block NSArray *hottestArr = lotteryArr.copy;
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSMutableDictionary *saveDic;
+        NSDictionary *resultDic = [[TAVDatabaseTool share] queryHottestLimit:@1].firstObject;
+        if (resultDic == nil) {
+            saveDic = [NSMutableDictionary dictionary];
+            for (int i = 0; i < 33; i++) {
+                saveDic[[NSString stringWithFormat:@"rq%d", i + 1]] = @0;
+            }
+            for (int j = 0; j < 16; j++) {
+                saveDic[[NSString stringWithFormat:@"bq%d", j + 1]] = @0;
+            }
+            saveDic[@"odd_even_ratio"] = @-1;
+            saveDic[@"red_sum"] = @0;
+            saveDic[@"issue"] = @0;
+        } else {
+            saveDic = resultDic.mutableCopy;
+        }
+        
+        
+        for (NSUInteger i = hottestArr.count - 1; i > 0; i--) {
+            NSDictionary *lotteryDic = hottestArr[i];
+            TAVHallModel *model = [[TAVHallModel alloc]initWithDictionary:lotteryDic];
+            
+            int oddNum = 0;
+            int redSum = 0;
+            for (int i = 0; i < model.rqNumArr.count; i++) {
+                id rqValue = model.rqNumArr[i];
+                saveDic[[NSString stringWithFormat:@"rq%@", rqValue]] = @([saveDic[[NSString stringWithFormat:@"rq%@", rqValue]] integerValue] + 1);
+                redSum += [rqValue integerValue];
+                if ([rqValue integerValue] % 2 != 0) {
+                    oddNum++;
+                }
+            }
+            saveDic[@"odd_even_ratio"] = @(oddNum);
+            saveDic[@"red_sum"] = @(redSum);
+            
+            saveDic[@"issue"] = lotteryDic[@"issueno"];
+            
+            saveDic[[NSString stringWithFormat:@"bq%@", model.bqNum]] = @([saveDic[[NSString stringWithFormat:@"bq%@", model.bqNum]] integerValue] + 1);
+            
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                [[TAVDatabaseTool share] saveHottest:saveDic];
+            });
+
+        }
+        
+    });
+
 }
 
 - (NSArray *)parseInHistoryPO:(NSArray *)histories {
