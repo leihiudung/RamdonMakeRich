@@ -91,7 +91,10 @@ static TAVDatabaseTool *databaseTool;
     NSDictionary *resultDic;
     [_db open];
     NSError *queryError;
-    FMResultSet *resultSet = [_db executeQuery:@"select * from t_issueno where issue >= ? and issue <= ? limit ?;" values:@[issueno, toIssueno, limit == nil ? @20 : limit] error:&queryError];
+    
+    NSString *sql = [NSString stringWithFormat:@"select * from t_issue %@", issueno == nil && toIssueno == nil ? [NSString stringWithFormat:@" limit %@", limit == nil ? @20 : limit] : (issueno == nil ? [NSString stringWithFormat:@" where issue >= %@ order by issue desc", toIssueno] : (toIssueno == nil ? [NSString stringWithFormat:@" where issue <= %@ order by issue desc", issueno] : [NSString stringWithFormat:@" where issue <= %@ and issue >= %@", issueno, toIssueno]))];
+    
+    FMResultSet *resultSet = [_db executeQuery:sql];
     if (queryError != nil) {
         resultDic = [self createErrorMsg:queryError.description];
         [_db close];
@@ -104,7 +107,7 @@ static TAVDatabaseTool *databaseTool;
         NSMutableDictionary *mutableDic = [NSMutableDictionary dictionary];
         for (int i = 0; i < columnCount; i++) {
             NSString *key = [resultSet columnNameForIndex:i];
-            id value = [resultSet valueForKey:key];
+            id value = [resultSet objectForColumn:key];
             [mutableDic setObject:value forKey:key];
         }
         [resultArr addObject:mutableDic.copy];
@@ -116,12 +119,12 @@ static TAVDatabaseTool *databaseTool;
 }
 
 - (NSDictionary *)createErrorMsg:(NSString *)msg {
-    NSDictionary *errorDic = @{@"status": @(-1), @"msg": msg};
+    NSDictionary *errorDic = @{@"status": @(-1), @"msg": msg, @"data": [NSNull null]};
     return errorDic;
 }
 
-- (NSDictionary *)createMsg:(id)msg {
-    NSDictionary *errorDic = @{@"status": @(0), @"msg": msg};
+- (NSDictionary *)createMsg:(id)data {
+    NSDictionary *errorDic = @{@"status": @(0), @"msg": @"without error", @"data": data};
     return errorDic;
 }
 @end

@@ -24,6 +24,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWitnViewModelProtocol:(id<TAVViewModelProtocol>)viewModelPro;
 - (id)executeRequestDataSignal:(id)input;
 - (void)initCommand;
+
+- (NSDictionary *)createErrorMsg:(NSString *)msg;
+
+- (NSDictionary *)createMsg:(id)data;
+
 @end
 
 NS_ASSUME_NONNULL_END

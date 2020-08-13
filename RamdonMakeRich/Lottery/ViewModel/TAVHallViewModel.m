@@ -35,14 +35,14 @@
                 return nil;
             }
             NSDictionary *dic = (NSDictionary *)input;
-            [weakSelf requestLotteryHistoryFrom:dic[@"from_index"] toIssue:dic[@"to_index"] withResultBlock:^(id resultDic) {
-                NSDictionary *dic = (NSDictionary *)resultDic;
-                if ([dic[@"state"] integerValue] == -1) {
+            [weakSelf requestLotteryHistoryFrom:dic[@"from_index"] toIssue:dic[@"to_index"] withResultBlock:^(id resultArr) {
+                NSArray *arr = (NSArray *)resultArr;
+                if ([arr count] == 0) {
                     [subscriber sendCompleted];
                     return;
                 }
-                [self saveLotteryHistory:dic[@"msg"]];
-                [subscriber sendNext:@""];
+                [self saveLotteryHistory:arr];
+                [subscriber sendNext:[self createMsg:[self parseInHistoryPO:arr]]];
                 [subscriber sendCompleted];
             }];
             
@@ -63,7 +63,7 @@
             }
             
             NSMutableArray *poArr = [NSMutableArray array];
-            NSArray *resultArr = resultDic[@"msg"];
+            NSArray *resultArr = resultDic[@"data"];
             for (NSDictionary *dic in resultArr) {
                 TAVLotteryPO *po = [[TAVLotteryPO alloc]initWithDictionary:dic];
                 [poArr addObject:po];
@@ -82,19 +82,39 @@
 /// @param issueno 开始期数
 /// @param toIssueno 结束期数
 - (void)requestLotteryHistoryFrom:(id _Nullable)issueno toIssue:(NSString * _Nullable)toIssueno withResultBlock:(void (^)(id))resultBlock {
-//    if (issueno == nil && toIssueno == nil) {
-//        return;
-//    }
+
     [[TAVNetworkTool share] requestLotteryHistory:issueno == nil ? toIssueno : issueno withResultBlock:^(id _Nonnull resultDic) {
-        resultBlock(resultDic);
+        NSDictionary *dic = resultDic;
+        NSMutableArray *modelArr = [NSMutableArray array];
+        if (dic != nil && [dic objectForKey:@"list"]) {
+            [modelArr addObjectsFromArray:dic[@"list"]];
+//            for (NSDictionary *lotteryDic in lotteryArr) {
+//                TAVHallModel *model = [[TAVHallModel alloc]initWithDictionary:lotteryDic];
+//                [modelArr addObject:model];
+//            }
+        }
+        resultBlock(modelArr.copy);
     }];
     
 }
 
-- (void)saveLotteryHistory:(NSArray *)histories {
-    for (TAVHallModel *model in histories) {
-        [[TAVDatabaseTool share] saveLottery:model];
+- (void)saveLotteryHistory:(NSArray *)lotteryArr {
+    for (NSDictionary *lotteryDic in lotteryArr) {
+        TAVHallModel *model = [[TAVHallModel alloc]initWithDictionary:lotteryDic];
+        BOOL saveFlag = [[TAVDatabaseTool share] saveLottery:model];
     }
+//    for (TAVHallModel *model in histories) {
+//        [[TAVDatabaseTool share] saveLottery:model];
+//    }
+}
+
+- (NSArray *)parseInHistoryPO:(NSArray *)histories {
+    NSMutableArray *lotteryArr = [NSMutableArray array];
+    for (NSDictionary *lotteryDic in histories) {
+        TAVLotteryPO *lotteryPO = [[TAVLotteryPO alloc]initWithDictionary:lotteryDic];
+        [lotteryArr addObject:lotteryPO];
+    }
+    return lotteryArr.copy;
 }
 
 - (NSDictionary *)queryLotteryHistory:(id _Nullable)issueno toIssue:(id _Nullable)toIssueno withLimit:(id)limit {

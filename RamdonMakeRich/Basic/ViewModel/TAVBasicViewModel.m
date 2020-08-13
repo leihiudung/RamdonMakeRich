@@ -36,4 +36,13 @@
     return [RACSignal empty];
 }
 
+- (NSDictionary *)createErrorMsg:(NSString *)msg {
+    NSDictionary *errorDic = @{@"status": @(-1), @"msg": msg, @"data": [NSNull null]};
+    return errorDic;
+}
+
+- (NSDictionary *)createMsg:(id)data {
+    NSDictionary *errorDic = @{@"status": @(0), @"msg": @"without error", @"data": data};
+    return errorDic;
+}
 @end

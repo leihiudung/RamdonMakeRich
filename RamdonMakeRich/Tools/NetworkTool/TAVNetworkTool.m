@@ -57,7 +57,7 @@ static TAVNetworkTool *networkTool;
     NSString *path = @"/caipiao/history";
     NSString *method = @"POST";
 
-    NSString *querys = [NSString stringWithFormat:@"?caipiaoid=11&issueno=%@&num=5", (issueno == nil ? @2020074 : [NSString stringWithFormat:@"&issueno=%@", @"2020074"])];//@"?caipiaoid=11&issueno=&num=20";
+    NSString *querys = [NSString stringWithFormat:@"?caipiaoid=11&issueno=%@&num=5", issueno == nil ? @"" : issueno];//@"?caipiaoid=11&issueno=&num=20";
     NSString *url = [NSString stringWithFormat:@"%@%@%@",  Host,  path , querys];
     NSString *bodys = @"null";
 
@@ -72,7 +72,8 @@ static TAVNetworkTool *networkTool;
     NSURLSessionDataTask *task = [requestSession dataTaskWithRequest:self.request
         completionHandler:^(NSData * _Nullable body , NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error != nil) {
-            self.lotteryDic = [self createErrorMsg:error.description];
+//            self.lotteryDic = [self createErrorMsg:error.description];
+            resultBlock([self createErrorMsg:error.description]);
             return;
         }
         NSLog(@"Response object: %@" , response);
@@ -81,14 +82,9 @@ static TAVNetworkTool *networkTool;
         NSError *jsonError;
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:body options:NSJSONReadingMutableLeaves error:&jsonError];
         
-        if (dic != nil && dic[@"result"][@"caipiaoid"]) {
-            NSMutableArray *modelArr = [NSMutableArray array];
-            NSArray *lotteryArr = dic[@"result"][@"list"];
-            for (NSDictionary *lotteryDic in lotteryArr) {
-                TAVHallModel *model = [[TAVHallModel alloc]initWithDictionary:lotteryDic];
-                [modelArr addObject:model];
-            }
-            resultBlock([self createMsg:modelArr.copy]);
+        if (jsonError == nil) {
+            
+            resultBlock([self createMsg:dic[@"result"]]);
         } else {
             resultBlock([self createErrorMsg:@"error"]);
         }
@@ -105,8 +101,8 @@ static TAVNetworkTool *networkTool;
     return errorDic;
 }
 
-- (NSDictionary *)createMsg:(NSString *)msg {
-    NSDictionary *errorDic = @{@"status": @(0), @"msg": msg};
+- (NSDictionary *)createMsg:(id)data {
+    NSDictionary *errorDic = @{@"status": @(0), @"msg": @"without error", @"data": data};
     return errorDic;
 }
 @end

@@ -17,6 +17,7 @@
 		002A886E24D5500500003602 /* data_out.dat in Resources */ = {isa = PBXBuildFile; fileRef = 002A886D24D5500400003602 /* data_out.dat */; };
 		002A887124D550A000003602 /* BasicCaculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 002A887024D550A000003602 /* BasicCaculatorViewController.m */; };
 		002A887424D5578C00003602 /* TAVDatabaseTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 002A887324D5578C00003602 /* TAVDatabaseTool.m */; };
+		002E490B24E4EBA5005EF9B9 /* TAVArithmeticTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 002E490A24E4EBA5005EF9B9 /* TAVArithmeticTool.m */; };
 		0082CFF624D825DB00BE9065 /* TAVNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0082CFF524D825DB00BE9065 /* TAVNetworkTool.m */; };
 		0082D00024D9584E00BE9065 /* TAVBasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0082CFFF24D9584E00BE9065 /* TAVBasicViewController.m */; };
 		0082D00324D9588700BE9065 /* TAVHallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0082D00224D9588700BE9065 /* TAVHallViewController.m */; };
@@ -79,6 +80,8 @@
 		002A887024D550A000003602 /* BasicCaculatorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicCaculatorViewController.m; sourceTree = "<group>"; };
 		002A887224D5578C00003602 /* TAVDatabaseTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAVDatabaseTool.h; sourceTree = "<group>"; };
 		002A887324D5578C00003602 /* TAVDatabaseTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAVDatabaseTool.m; sourceTree = "<group>"; };
+		002E490924E4EBA5005EF9B9 /* TAVArithmeticTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAVArithmeticTool.h; sourceTree = "<group>"; };
+		002E490A24E4EBA5005EF9B9 /* TAVArithmeticTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAVArithmeticTool.m; sourceTree = "<group>"; };
 		0082CFF424D825DB00BE9065 /* TAVNetworkTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TAVNetworkTool.h; sourceTree = "<group>"; };
 		0082CFF524D825DB00BE9065 /* TAVNetworkTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAVNetworkTool.m; sourceTree = "<group>"; };
 		0082CFFC24D8281100BE9065 /* RamdonMakeRichHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RamdonMakeRichHeader.pch; sourceTree = "<group>"; };
@@ -221,9 +224,26 @@
 			path = RamdonMakeRichUITests;
 			sourceTree = "<group>";
 		};
+		002E490724E4D90E005EF9B9 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		002E490824E4EB2C005EF9B9 /* Arithmetic */ = {
+			isa = PBXGroup;
+			children = (
+				002E490924E4EBA5005EF9B9 /* TAVArithmeticTool.h */,
+				002E490A24E4EBA5005EF9B9 /* TAVArithmeticTool.m */,
+			);
+			path = Arithmetic;
+			sourceTree = "<group>";
+		};
 		0082CFF224D825C400BE9065 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				002E490824E4EB2C005EF9B9 /* Arithmetic */,
 				0082CFFD24D82B7400BE9065 /* Database */,
 				0082CFF324D825CB00BE9065 /* NetworkTool */,
 			);
@@ -373,6 +393,7 @@
 			children = (
 				0082D03C24DE6FC600BE9065 /* TAVHistoryViewController.h */,
 				0082D03D24DE6FC600BE9065 /* TAVHistoryViewController.m */,
+				002E490724E4D90E005EF9B9 /* New Group */,
 			);
 			path = LotteryHistory;
 			sourceTree = "<group>";
@@ -682,6 +703,7 @@
 				0082D00F24D970C400BE9065 /* TAVLotteryPO.m in Sources */,
 				0082D03724DD3D7D00BE9065 /* TAVHallCollectionViewCell.m in Sources */,
 				0082D03E24DE6FC600BE9065 /* TAVHistoryViewController.m in Sources */,
+				002E490B24E4EBA5005EF9B9 /* TAVArithmeticTool.m in Sources */,
 				002A884224D2CCED00003602 /* main.m in Sources */,
 				0082D03124DC155A00BE9065 /* TAVHallView.m in Sources */,
 			);

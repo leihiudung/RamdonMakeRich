@@ -43,7 +43,7 @@
             return;
         }
         for (TAVLotteryPO *lotteryPO in arr) {
-            NSLog(@"done");
+            
         }
         
     }];
@@ -57,7 +57,8 @@
     __weak typeof(self)weakSelf = self;
     [[[(TAVHallViewModel *)self.viewModel requestLotteryHistoryCommand] execute:paramDic] subscribeNext:^(id  _Nullable x) {
        NSDictionary *dic = (NSDictionary *)x;
-       if ([dic[@"state"] integerValue] == -1) {
+       if ([dic[@"state"] integerValue] == 0) {
+           // dic[@"data"]返回的是数组, 
            
            return;
        }
