@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TAVHallViewModel : TAVBasicViewModel
 
+@property (nonatomic, strong) NSArray *lotteryHistoryArr;
+
 @property (nonatomic, strong) RACCommand *requestLotteryHistoryCommand;
 @property (nonatomic, strong) RACCommand *queryLotteryHistoryCommand;
 

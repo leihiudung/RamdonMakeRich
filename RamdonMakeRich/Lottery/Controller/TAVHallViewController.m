@@ -58,6 +58,14 @@
     self.hallView = [[TAVHallView alloc]initWithFrame:self.view.frame withViewModel:self.viewModel];
 //    [self.hallView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
     [self.view addSubview:self.hallView];
+//    self.hallView->isa;
+    Class tempClass = [self.hallView class];
+    Class tempClass2 = [TAVHallView class];
+    id jj = [[tempClass2 alloc]initWithFrame:self.view.frame withViewModel:self.viewModel];
+    
+    Class tempClass3 = object_getClass(self.hallView); // 获取到的就是一个类对象
+    BOOL metaFlag = class_isMetaClass(tempClass3); // tempclass3只是一个类对象
+    BOOL meta2Flag = class_isMetaClass(object_getClass(tempClass3)); // 只有通过类对象的Class isa指针指向的对象才是元类
     
     __weak typeof(self)weakSelf = self;
     [[self.hallView rac_signalForSelector:@selector(collectionView:didSelectItemAtIndexPath:) fromProtocol:@protocol(UICollectionViewDelegate)] subscribeNext:^(RACTuple * _Nullable x) {
@@ -86,4 +94,5 @@
     [self.navigationController pushViewController:historyController animated:YES];
     
 }
+
 @end

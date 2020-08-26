@@ -40,10 +40,20 @@
     if ([key isEqualToString:@"prize"]) {
         NSMutableArray *numArr = [NSMutableArray arrayWithCapacity:6];
         NSMutableArray *moneyArr = [NSMutableArray arrayWithCapacity:6];
-        for (NSDictionary *dic in value) {
-            [numArr addObject:dic[@"num"]];
-            [moneyArr addObject:dic[@"singlebonus"]];
+        
+        if ([value isKindOfClass:[NSNumber class]] && ![value boolValue]) {
+            for (int i = 0; i < 6; i++) {
+                [numArr addObject:@-1];
+                [moneyArr addObject:@-1];
+            }
+        } else {
+            for (NSDictionary *dic in value) {
+                [numArr addObject:dic[@"num"]];
+                [moneyArr addObject:dic[@"singlebonus"]];
+            }
         }
+        
+        
         self.prizeNumArr = numArr.copy;
         self.prizeMoneyArr = moneyArr.copy;
     }

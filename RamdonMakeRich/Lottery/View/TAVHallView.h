@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TAVBasicViewModel.h"
+#import "TAVHallViewModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

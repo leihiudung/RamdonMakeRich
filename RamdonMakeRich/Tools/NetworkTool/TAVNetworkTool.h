@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSDictionary *lotteryDic;
 
 + (instancetype)share;
-- (void)requestLotteryHistory:(id _Nullable)issueno withResultBlock:(void(^)(id))resultBlock;
+- (void)requestLotteryHistory:(id _Nullable)issueno andLimit:(int)limit  withResultBlock:(void(^)(id))resultBlock;
 @end
 
 NS_ASSUME_NONNULL_END

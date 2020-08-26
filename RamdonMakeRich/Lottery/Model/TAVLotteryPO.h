@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface TAVLotteryPO : NSObject
 
 @property (nonatomic, strong) NSString *lottery_time; //开奖日期 2020-01-01
-@property (nonatomic, strong) NSNumber *issus; // 期数
+@property (nonatomic, strong) NSString *issue; // 期数
 @property (nonatomic, strong) NSArray *rqNumArr;
 @property (nonatomic, strong) NSNumber *rq1;
 @property (nonatomic, strong) NSNumber *rq2;
@@ -38,8 +38,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSNumber *third_prize_winner;
 @property (nonatomic, strong) NSNumber *third_prize_money;
 
-@property (nonatomic, strong) NSNumber *fouth_prize_winner;
-@property (nonatomic, strong) NSNumber *fouth_prize_money;
+@property (nonatomic, strong) NSNumber *fourth_prize_winner;
+@property (nonatomic, strong) NSNumber *fourth_prize_money;
 
 @property (nonatomic, strong) NSNumber *fifth_prize_winner;
 @property (nonatomic, strong) NSNumber *fifth_prize_money;
@@ -47,6 +47,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSNumber *sixth_prize_winner;
 @property (nonatomic, strong) NSNumber *sixth_prize_money;
 
+@property (nonatomic, strong) NSArray<NSNumber *> *prize_winner_arr;
+@property (nonatomic, strong) NSArray<NSNumber *> *prize_money_arr;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dic;
 @end

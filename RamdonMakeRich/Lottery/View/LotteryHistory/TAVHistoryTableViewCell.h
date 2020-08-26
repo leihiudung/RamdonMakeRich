@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class TAVLotteryPO;
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TAVHistoryTableViewCell : UITableViewCell
+
+- (void)customerValue:(TAVLotteryPO *)lotteryPO;
 
 @end
 

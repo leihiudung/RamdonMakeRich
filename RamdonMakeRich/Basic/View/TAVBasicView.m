@@ -13,9 +13,10 @@
 
 @implementation TAVBasicView
 
-- (instancetype)initWithViewModel:(TAVBasicViewModel *)viewModel {
-    if (self = [super init]) {
+- (instancetype)initWithFrame:(CGRect)frame andViewModel:(TAVBasicViewModel *)viewModel {
+    if (self = [super initWithFrame:frame]) {
         self.viewModel = viewModel;
+        
     }
     return self;
 }

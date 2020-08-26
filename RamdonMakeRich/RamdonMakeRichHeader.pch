@@ -18,4 +18,6 @@
 #define CellWidth(targetView) (CenterX(targetView))
 #define COL ((int)(320.0 / SIZE / 2.0) * 2)
 
+#import "ConstValue.h"
+
 #endif /* RamdonMakeRichHeader_pch */

@@ -8,10 +8,26 @@
 
 #import "TAVArithmeticTool.h"
 
+
+@interface TAVArithmeticTool()
+
+@end
+
 @implementation TAVArithmeticTool
 
 + (id)hottestRedBallOf:(int)topNum {
     
     return @"";
+}
+
++ (id)caculatorBlueBallInGroupOf4Issueno:(NSArray *)issuenoArr {
+    if (issuenoArr.count < 4) {
+        return @NO;
+    }
+    for (int i = 0; i < issuenoArr.count / 4; i++) {
+        NSArray *ballsArr = issuenoArr[i];
+        
+    }
+    return @YES;
 }
 @end

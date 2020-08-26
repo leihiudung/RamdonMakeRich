@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface TAVBasicView : UIView
 
 - (instancetype)init NS_UNAVAILABLE;
-- (instancetype)initWithViewModel:(TAVBasicViewModel *)viewModel;
+- (instancetype)initWithFrame:(CGRect)frame andViewModel:(TAVBasicViewModel *)viewModel;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -9,7 +9,7 @@
 #import "TAVHallView.h"
 #import "TAVHallCollectionViewCell.h"
 #import "TAVHallCollectionViewCellLayout.h"
-#import "TAVHallViewModel.h"
+//#import "TAVHallViewModel.h"
 
 #import "TAVHistoryViewController.h"
 

@@ -48,16 +48,17 @@ static TAVNetworkTool *networkTool;
 
 - (void)resetParams:(NSDictionary *)dic {
     NSString *issuenoStr = dic[@"issueno"];
-    [self requestLotteryHistory:issuenoStr withResultBlock:^(id _Nonnull dic) {
+    int limit = [dic[@"limit"] intValue];
+    [self requestLotteryHistory:issuenoStr andLimit:limit withResultBlock:^(id _Nonnull dic) {
         
     }];
 }
 
-- (void)requestLotteryHistory:(id _Nullable)issueno withResultBlock:(nonnull void (^)(id _Nonnull))resultBlock {
+- (void)requestLotteryHistory:(id _Nullable)issueno andLimit:(int)limit withResultBlock:(nonnull void (^)(id _Nonnull))resultBlock {
     NSString *path = @"/caipiao/history";
     NSString *method = @"POST";
 
-    NSString *querys = [NSString stringWithFormat:@"?caipiaoid=11&issueno=%@&num=5", issueno == nil ? @"" : issueno];//@"?caipiaoid=11&issueno=&num=20";
+    NSString *querys = [NSString stringWithFormat:@"?caipiaoid=11&issueno=%@&num=%d", issueno == nil ? @"" : issueno, limit];//@"?caipiaoid=11&issueno=&num=20";
     NSString *url = [NSString stringWithFormat:@"%@%@%@",  Host,  path , querys];
     NSString *bodys = @"null";
 
@@ -76,7 +77,6 @@ static TAVNetworkTool *networkTool;
             resultBlock([self createErrorMsg:error.description]);
             return;
         }
-        NSLog(@"Response object: %@" , response);
         NSString *bodyString = [[NSString alloc] initWithData:body encoding:NSUTF8StringEncoding];
         
         NSError *jsonError;
