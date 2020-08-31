@@ -9,6 +9,7 @@
 #import "TAVHistoryView.h"
 #import "TAVHallViewModel.h"
 #import "TAVHistoryTableViewCell.h"
+#import "TAVLotteryPO.h"
 
 @interface TAVHistoryView() //<UITableViewDataSource, UITableViewDelegate>
 
@@ -37,8 +38,32 @@
         }
         return YES;
     }] subscribeNext:^(id  _Nullable x) {
-        NSLog(@" done x%@", x);
-        self.historyArr = x;
+        NSArray *historyArr = x;
+        NSMutableArray *moreArr = [NSMutableArray array];
+        if ([(TAVLotteryPO *)moreArr.lastObject issue].intValue > [(TAVLotteryPO *)self.historyArr.firstObject issue].intValue || [self.historyArr count] == 0) {
+            [moreArr addObjectsFromArray:x];
+            [moreArr addObjectsFromArray:self.historyArr];
+        } else {
+            
+            for (int i = 0; i < self.historyArr.count; i++) {
+                TAVLotteryPO *tempPO = self.historyArr[i];
+                if ([tempPO.issue intValue] < [(TAVLotteryPO *)historyArr.lastObject issue].intValue) {
+
+                    [moreArr addObjectsFromArray: self.historyArr];
+                    NSIndexSet *insertSet = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(i, historyArr.count)];
+                    [moreArr insertObjects:x atIndexes:insertSet];
+                    break;
+                }
+                
+                if (i == self.historyArr.count - 1) {
+                    [moreArr addObjectsFromArray:self.historyArr];
+                    [moreArr addObjectsFromArray:x];
+                }
+            }
+        }
+        
+        
+        self.historyArr = moreArr.copy;
         [self.tableView reloadData];
     }];
     
@@ -62,14 +87,6 @@
     return cell;
 }
 
-//- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-//
-//    CGFloat currentOffsetY = scrollView.contentOffset.y;
-//    if (currentOffsetY + scrollView.frame.size.height > scrollView.contentSize.height + 45 && !self.loadMoreFlag) {
-//
-//
-//    }
-//
-//}
+
 
 @end

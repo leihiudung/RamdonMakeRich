@@ -22,6 +22,9 @@
 @property (nonatomic, assign) BOOL loadMoreFlag;
 @property (nonatomic, assign) BOOL requestMoreFlag;
 
+@property (nonatomic, assign) int diffValue;
+@property (nonatomic, assign) int moreDiffValue;
+
 @end
 
 @implementation TAVHistoryViewController
@@ -37,6 +40,9 @@
     _historyView = [[TAVHistoryView alloc]initWithFrame:self.view.frame andViewModel:self.viewModel];
     [self.view addSubview:_historyView];
     
+    _diffValue = 0;
+    _moreDiffValue = 0;
+    
     __weak typeof(self)weakSelf = self;
     [[[self.historyView rac_signalForSelector:@selector(scrollViewDidScroll:) fromProtocol:@protocol(UITableViewDelegate)] skip:1] subscribeNext:^(RACTuple * _Nullable x) {
         
@@ -50,16 +56,19 @@
                 NSArray *arr = x;
                 if (arr.count == 0) {
                     NSDictionary *dic = @{@"from_issueno": ((TAVLotteryPO *)[(TAVHallViewModel *)self.viewModel lotteryHistoryArr].lastObject).issue, @"limit": @20};
+                    NSLog(@"index 1 reuqest");
                     [weakSelf requestLottery:dic];
                     return;
+                } else {
+                    self.loadMoreFlag = NO;
                 }
             } completed:^{
-                self.loadMoreFlag = NO;
+                
             }];
 
         }
         
-        if (currentOffsetY < (self.navigationController.navigationBar.frame.size.height * 2 + 45) * -1) {
+        if (currentOffsetY < (self.navigationController.navigationBar.frame.size.height * 2 + 45) * -1 && !self.requestMoreFlag) {
             self.requestMoreFlag = YES;
         }
          
@@ -70,6 +79,7 @@
             
             int diffissueno = [self calucatorDiffIssue:[((TAVHallViewModel *)self.viewModel).lotteryHistoryArr[0] lottery_time]];
             if (diffissueno == 0) {
+                self.requestMoreFlag = NO;
                 return;
             }
             
@@ -78,12 +88,16 @@
             edgeInset.top = 45;
             tableView.contentInset = edgeInset;
             
+            self.diffValue = diffissueno / 20;
+            self.moreDiffValue = diffissueno % 20;
+
             [weakSelf requestLottery:@{@"limit": @(diffissueno)}];
+
         }
         
     }];
     [self.historyView.tableView setDelegate:self.historyView];
-
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -105,27 +119,46 @@
 
 - (void)requestLottery:(NSDictionary *)paramDic {
     __weak typeof(self)weakSelf = self;
+    __block TAVLotteryPO *poInBlock;
+    __block int limitNum = 0;
+    
     [[[(TAVHallViewModel *)self.viewModel requestLotteryHistoryCommand] execute:paramDic] subscribeNext:^(id  _Nullable x) {
        NSDictionary *dic = (NSDictionary *)x;
        if ([dic[@"state"] integerValue] == 0) {
-           // dic[@"data"]返回的是数组, 
-//           int diffissueno = [self calucatorDiffIssue:[((TAVHallViewModel *)self.viewModel).lotteryHistoryArr[0] lottery_time]];
-//           if (diffissueno == 0) {
-//               return;
-//           }
-           
+           poInBlock = [(NSArray *)dic[@"data"] lastObject];
            UITableView *tableView = self.historyView.tableView;
            UIEdgeInsets edgeInset = tableView.contentInset;
            edgeInset.top = 0;
            tableView.contentInset = edgeInset;
-           
            return;
        }
-
+        
     } error:^(NSError * _Nullable error) {
        
     } completed:^{
-        
+        int needLimit = 0;
+        if (self.diffValue > 1) {
+            self.diffValue -= 1;
+            needLimit = self.diffValue * 20;
+        } else if (self.moreDiffValue >= 1) {
+            
+            needLimit = self.moreDiffValue % 20;
+            self.moreDiffValue = 0;
+        } else {
+            self.loadMoreFlag = NO;
+            self.requestMoreFlag = NO;
+            
+            
+            UIEdgeInsets edgeInset = self.historyView.tableView.contentInset;
+            edgeInset.top = 0;
+            self.historyView.tableView.contentInset = edgeInset;
+            
+            
+            return;
+        }
+
+        [self requestLottery:@{@"from_issueno": poInBlock.issue, @"limit": @(needLimit)}];
+
     }];
 }
 

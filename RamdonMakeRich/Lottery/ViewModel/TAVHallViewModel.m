@@ -49,12 +49,12 @@
                 }
                 
                 NSMutableArray *tempArr = [NSMutableArray arrayWithArray:lotteryInServerArr];
-                [tempArr addObjectsFromArray:self.lotteryHistoryArr];
+//                [tempArr addObjectsFromArray:self.lotteryHistoryArr];
 
                 dispatch_sync(dispatch_get_main_queue(), ^{
                     self.lotteryHistoryArr = tempArr.copy;
                     [self saveLotteryHistory:arr];
-                    [subscriber sendNext:[self createMsg:[self parseInHistoryPO:arr]]];
+                    [subscriber sendNext:[self createMsg:lotteryInServerArr]];
                     [subscriber sendCompleted];
                 });
                 
@@ -119,8 +119,8 @@
         BOOL saveFlag = [[TAVDatabaseTool share] saveLottery:model];
         
     }
-    __block NSArray *hottestArr = lotteryArr.copy;
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+    NSArray *hottestArr = lotteryArr.copy;
+//    dispatch_async(dispatch_get_global_queue(0, 0), ^{
 //        NSMutableDictionary *saveDic;
         NSArray *resultInDBArr = [[TAVDatabaseTool share] queryHottestLimit200AndOrder:OrderByAsc];
         NSDictionary *resultDic = resultInDBArr.firstObject;
@@ -135,29 +135,8 @@
             saveDic[@"odd_even_ratio"] = @-1;
             saveDic[@"red_sum"] = @0;
             saveDic[@"issue"] = @0;
-//        } else {
-//            saveDic = resultDic.mutableCopy;
-//            saveDic[@"id"] = nil;
-//        }
         
         int countForAnotherCondition = 200;
-//        int countOfTableName = Count30;
-        
-//        NSMutableDictionary *count30Dic = [NSMutableDictionary dictionary];
-//        NSMutableDictionary *count50Dic = [NSMutableDictionary dictionary];
-//        NSMutableDictionary *count100Dic = [NSMutableDictionary dictionary];
-//        NSMutableDictionary *count200Dic = [NSMutableDictionary dictionary];
-
-        // 获取top hottest表中的所有记录.在和需要加入的记录条数newAccount计算差.在差值数组中再插入newAccount条记录
-//        NSArray *topHottestArr = [[TAVDatabaseTool share] queryTopHottestTable:20 order:OrderByDesc];
-//        int diffTopHottestInDBAndServer = topHottestArr.count - hottestArr.count;
-//        topHottestArr = [topHottestArr subarrayWithRange:NSMakeRange(diffTopHottestInDBAndServer, hottestArr.count)];
-        
-//        NSDictionary *lastestTopHottestDic = topHottestArr.firstObject;
-//        if (diffTopHottestInDBAndServer > 0) {
-//            [[TAVDatabaseTool share] deleteTopHottest:topHottestArr[diffTopHottestInDBAndServer]];
-//
-//        }
         
         // 新增表
         for (NSUInteger i = 0; i < hottestArr.count; i++) {
@@ -183,7 +162,7 @@
             saveDic[[NSString stringWithFormat:@"bq%d", model.bqNum.intValue]] = @([saveDic[[NSString stringWithFormat:@"bq%d", model.bqNum.intValue]] integerValue] + 1);
             
             [[TAVDatabaseTool share] saveHottest:saveDic to:countForAnotherCondition];
-            
+            NSLog(@"operation save %d", i);
         }
         
         // 更新表
@@ -201,21 +180,16 @@
                 
             }
             tempDic[@"issue"] = lotteryDic[@"issue"];
-//            saveDic[[NSString stringWithFormat:@"bq%@", model.bqNum]] = @([saveDic[[NSString stringWithFormat:@"bq%@", model.bqNum]] integerValue] + 1);
             
             [[TAVDatabaseTool share] updateHottest:tempDic.copy to:countForAnotherCondition];
+            NSLog(@"operation update %lu %@", (unsigned long)i, tempDic[@"rq1"]);
         }
         
         NSArray *resultArr = [[TAVDatabaseTool share] queryHottestLimit200AndOrder:OrderByDesc];
         if (resultArr.count > 200) {
             [[TAVDatabaseTool share] deleteHottest:resultArr.lastObject];
         }
-        
-        
-        
-//        [[TAVDatabaseTool share] saveHottest:saveDic to:countForAnotherCondition];
-        
-    });
+
 
 }
 

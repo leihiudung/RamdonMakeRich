@@ -133,7 +133,7 @@ static TAVDatabaseTool *databaseTool;
     [_db open];
     NSError *queryError;
     
-    NSString *sql = [NSString stringWithFormat:@"select * from t_issue %@", issueno == nil && toIssueno == nil ? [NSString stringWithFormat:@" order by issue desc limit %@ ", limit == nil ? @20 : limit] : (issueno == nil ? [NSString stringWithFormat:@" where issue >= %@ order by issue desc limit %@", toIssueno, limit == nil ? @20 : limit] : (toIssueno == nil ? [NSString stringWithFormat:@" where issue <= %@ order by issue desc limit %@", issueno, limit == nil ? @20 : limit] : [NSString stringWithFormat:@" where issue <= %@ and issue >= %@ limit %@", issueno, toIssueno, limit == nil ? @20 : limit]))];
+    NSString *sql = [NSString stringWithFormat:@"select * from t_issue %@", issueno == nil && toIssueno == nil ? [NSString stringWithFormat:@" order by issue desc limit %@ ", limit == nil ? @20 : limit] : (issueno == nil ? [NSString stringWithFormat:@" where issue >= %@ order by issue desc limit %@", toIssueno, limit == nil ? @20 : limit] : (toIssueno == nil ? [NSString stringWithFormat:@" where issue  %@ order by issue desc limit %@", issueno, limit == nil ? @20 : limit] : [NSString stringWithFormat:@" where issue <= %@ and issue >= %@ limit %@", issueno, toIssueno, limit == nil ? @20 : limit]))];
     
     FMResultSet *resultSet = [_db executeQuery:sql];
     if (queryError != nil) {
@@ -209,6 +209,7 @@ static TAVDatabaseTool *databaseTool;
     [columnsStr appendString:blueBallStr.copy];
     [columnsStr appendFormat:@" %@, %@, %@, %@);", dic[@"odd_even_ratio"], dic[@"red_sum"], dic[@"issue"], @(date.timeIntervalSince1970)];
     BOOL updateFlag = [_db executeUpdate:columnsStr];
+    NSLog(@"index 更新table saveHottest:");
     [_db close];
 }
 
@@ -234,7 +235,7 @@ static TAVDatabaseTool *databaseTool;
 - (NSArray *)queryHottestLimit:(id _Nullable)limit andOrder:(nonnull NSString *)order {
     [_db open];
     
-    FMResultSet *resultSet = [_db executeQuery:[NSString stringWithFormat:@"select * from t_hottest_%@ order by issue %@ limit %@;", limit, order, limit == nil ? @1 : limit]];
+    FMResultSet *resultSet = [_db executeQuery:[NSString stringWithFormat:@"select * from t_hottest_200 order by issue %@ limit %@;", order, limit == nil ? @1 : limit]];
     NSMutableArray *resultArr = [NSMutableArray array];
     while (resultSet.next) {
         int columnCount = [resultSet columnCount];
@@ -265,6 +266,10 @@ static TAVDatabaseTool *databaseTool;
 
 - (NSArray *)queryHottestLimit200AndOrder:(NSString *)order {
     return [self queryHottestLimit:@200 andOrder:order];
+}
+
+- (NSArray *)queryHottestLimitOrder:(NSString *)order {
+    return [self queryHottestLimit:@201 andOrder:order];
 }
 
 - (NSArray *)queryAllHottestLimit:(id _Nullable)limit andOrder:(nonnull NSString *)order {
